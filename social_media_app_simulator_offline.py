@@ -4,7 +4,7 @@ print(' ')
 import os #para detectar si estas en linux o en windows y para trabajar con el sistema operativo
 from pprint import saferepr # no me acuerdo para que servia
 import stat #para cosas de sistemas operativos creo
-S
+
 import tkinter as tk # GUI
 from tkinter import ttk, messagebox #messagebox para widgets desplegables
 from tkinter.font import Font #fuentes especiales
