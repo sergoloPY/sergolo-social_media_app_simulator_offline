@@ -62,6 +62,8 @@ class Cuerpo():
         self.currently_executing_msg_stalin = False
         self.logeado = False
         
+        self.next_row_of_post = 4
+        
         self.user = {}
         self.user_actually_loged = []
         self.nombre_usuario_publico = 'Usuario'
@@ -168,47 +170,26 @@ class Cuerpo():
 
         self.frame_browser = ttk.LabelFrame(frame_follow)
         self.frame_browser.grid(row=6,column=0, pady=10, sticky='ew')
-
         
         self.frame_para_ti = ttk.LabelFrame(self.posts_frame, text='')
         self.frame_para_ti.grid(row=1, column=0, sticky='ns', pady=0, padx=0)
 
+        
+        
+        
+        
+        
+
         frame_escribir_post = ttk.LabelFrame(self.frame_para_ti)
-        frame_escribir_post.grid(row=0, column=0, pady=0, padx=0, sticky='ew')
+        frame_escribir_post.grid(row=0, column=1, pady=0, padx=0, sticky='ew')
 
         frame_post_airstrike_company = ttk.LabelFrame(self.frame_para_ti)
-        frame_post_airstrike_company.grid(row=1, column=0, pady=0, padx=0, sticky='ew')
+        frame_post_airstrike_company.grid(row=2, column=1, pady=0, padx=0, sticky='ew')
 
         frame_post1 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post1.grid(row=2, column=0, pady=0, padx=0, sticky='ew')
+        frame_post1.grid(row=3, column=1, pady=0, padx=0, sticky='ew')
 
-        frame_post2 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post2.grid(row=3, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post3 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post3.grid(row=4, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post4 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post4.grid(row=5, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post5 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post5.grid(row=6, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post6 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post6.grid(row=7, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post7 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post7.grid(row=8, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post8 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post8.grid(row=9, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post9 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post9.grid(row=10, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post10 = ttk.LabelFrame(self.frame_para_ti)
-        frame_post10.grid(row=11, column=0, pady=0, padx=0, sticky='ew')
-
+        
         # Crear los atributos entry_var y place_holder_text
         self.place_holder_text = 'Buscar en social media app simulator'
         self.entry_var = tk.StringVar()
@@ -313,9 +294,9 @@ class Cuerpo():
 
         
 
-        self.pad_invisible2 = ttk.Label(self.frame_para_ti)
-        self.pad_invisible2.grid(padx=710, pady=700)
-        self.pad_invisible2.configure(state='disabled')
+        # self.pad_invisible2 = ttk.Label(self.frame_para_ti)
+        # self.pad_invisible2.grid(padx=710, pady=700)
+        # self.pad_invisible2.configure(state='disabled')
         #publicar post
         self.foto_escribir_post = ttk.Label(frame_escribir_post, image=self.profile2_img)
         self.foto_escribir_post.grid(row=0, column=0, padx=10, pady=0)
@@ -353,126 +334,10 @@ class Cuerpo():
         self.post1.grid(row=1, column=1)
         self.post1_2 = ttk.Label(frame_post1, text='------->')
         self.post1_2.grid(row=1, column=2)
-        self.post1_real = ttk.Label(frame_post1, text='Esto es un post') 
+        self.post1_real = ttk.Label(frame_post1, text='Esto es un post de ejemplo') 
         self.post1_real.grid(row=1, column=3)
 
-        self.post2_foto = ttk.Label(frame_post2, image=self.post1_img)
-        self.post2_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post2_nombre = ttk.Label(frame_post2, text='Usuario', style='Nombree.TLabel')
-        self.post2_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post2_usuario = ttk.Label(frame_post2, text='@usuario', style='Usuario.TLabel')
-        self.post2_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post2 = ttk.Label(frame_post2, text='-------')
-        self.post2.grid(row=1, column=1)
-        self.post2_2 = ttk.Label(frame_post2, text='------->')
-        self.post2_2.grid(row=1, column=2)
-        self.post2_real = ttk.Label(frame_post2, text='Esto es un post')
-        self.post2_real.grid(row=1, column=3)
-
-        self.post3_foto = ttk.Label(frame_post3, image=self.post1_img)
-        self.post3_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post3_nombre = ttk.Label(frame_post3, text='Usuario', style='Nombree.TLabel')
-        self.post3_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post3_usuario = ttk.Label(frame_post3, text='@usuario', style='Usuario.TLabel')
-        self.post3_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post3 = ttk.Label(frame_post3, text='-------')
-        self.post3.grid(row=1, column=1)
-        self.post3_2 = ttk.Label(frame_post3, text='------->')
-        self.post3_2.grid(row=1, column=2)
-        self.post3_real = ttk.Label(frame_post3, text='Esto es un post')
-        self.post3_real.grid(row=1, column=3)
-
-        self.post4_foto = ttk.Label(frame_post4, image=self.post1_img)
-        self.post4_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post4_nombre = ttk.Label(frame_post4, text='Usuario', style='Nombree.TLabel')
-        self.post4_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post4_usuario = ttk.Label(frame_post4, text='@usuario', style='Usuario.TLabel')
-        self.post4_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post4 = ttk.Label(frame_post4, text='-------')
-        self.post4.grid(row=1, column=1)
-        self.post4_2 = ttk.Label(frame_post4, text='------->')
-        self.post4_2.grid(row=1, column=2)
-        self.post4_real = ttk.Label(frame_post4, text='Esto es un post')
-        self.post4_real.grid(row=1, column=3)
-
-        self.post5_foto = ttk.Label(frame_post5, image=self.post1_img)
-        self.post5_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post5_nombre = ttk.Label(frame_post5, text='Usuario', style='Nombree.TLabel')
-        self.post5_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post5_usuario = ttk.Label(frame_post5, text='@usuario', style='Usuario.TLabel')
-        self.post5_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post5 = ttk.Label(frame_post5, text='-------')
-        self.post5.grid(row=1, column=1)
-        self.post5_2 = ttk.Label(frame_post5, text='------->')
-        self.post5_2.grid(row=1, column=2)
-        self.post5_real = ttk.Label(frame_post5, text='Esto es un post')
-        self.post5_real.grid(row=1, column=3)
-
-        self.post6_foto = ttk.Label(frame_post6, image=self.post1_img)
-        self.post6_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post6_nombre = ttk.Label(frame_post6, text='Usuario', style='Nombree.TLabel')
-        self.post6_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post6_usuario = ttk.Label(frame_post6, text='@usuario', style='Usuario.TLabel')
-        self.post6_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post6 = ttk.Label(frame_post6, text='-------')
-        self.post6.grid(row=1, column=1)
-        self.post6_2 = ttk.Label(frame_post6, text='------->')
-        self.post6_2.grid(row=1, column=2)
-        self.post6_real = ttk.Label(frame_post6, text='Esto es un post')
-        self.post6_real.grid(row=1, column=3)
-
-        self.post7_foto = ttk.Label(frame_post7, image=self.post1_img)
-        self.post7_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post7_nombre = ttk.Label(frame_post7, text='Usuario', style='Nombree.TLabel')
-        self.post7_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post7_usuario = ttk.Label(frame_post7, text='@usuario', style='Usuario.TLabel')
-        self.post7_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post7 = ttk.Label(frame_post7, text='-------')
-        self.post7.grid(row=1, column=1)
-        self.post7_2 = ttk.Label(frame_post7, text='------->')
-        self.post7_2.grid(row=1, column=2)
-        self.post7_real = ttk.Label(frame_post7, text='Esto es un post')
-        self.post7_real.grid(row=1, column=3)
-
-        self.post8_foto = ttk.Label(frame_post8, image=self.post1_img)
-        self.post8_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post8_nombre = ttk.Label(frame_post8, text='Usuario', style='Nombree.TLabel')
-        self.post8_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post8_usuario = ttk.Label(frame_post8, text='@usuario', style='Usuario.TLabel')
-        self.post8_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post8 = ttk.Label(frame_post8, text='-------')
-        self.post8.grid(row=1, column=1)
-        self.post8_2 = ttk.Label(frame_post8, text='------->')
-        self.post8_2.grid(row=1, column=2)
-        self.post8_real = ttk.Label(frame_post8, text='Esto es un post')
-        self.post8_real.grid(row=1, column=3)
-
-        self.post9_foto = ttk.Label(frame_post9, image=self.post1_img) 
-        self.post9_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post9_nombre = ttk.Label(frame_post9, text='Usuario', style='Nombree.TLabel')
-        self.post9_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post9_usuario = ttk.Label(frame_post9, text='@usuario', style='Usuario.TLabel')
-        self.post9_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post9 = ttk.Label(frame_post9, text='-------')
-        self.post9.grid(row=1, column=1)
-        self.post9_2 = ttk.Label(frame_post9, text='------->')
-        self.post9_2.grid(row=1, column=2)
-        self.post9_real = ttk.Label(frame_post9, text='Esto es un post')
-        self.post9_real.grid(row=1, column=3)
-
-        self.post10_foto = ttk.Label(frame_post10, image=self.post1_img)
-        self.post10_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        self.post10_nombre = ttk.Label(frame_post10, text='Usuario', style='Nombree.TLabel')
-        self.post10_nombre.grid(row=0, column=1, padx=0, pady=0)
-        self.post10_usuario = ttk.Label(frame_post10, text='@usuario', style='Usuario.TLabel')
-        self.post10_usuario.grid(row=0, column=2, padx=0, pady=0)
-        self.post10 = ttk.Label(frame_post10, text='-------')
-        self.post10.grid(row=1, column=1)
-        self.post10_2 = ttk.Label(frame_post10, text='------->')
-        self.post10_2.grid(row=1, column=2)
-        self.post10_real = ttk.Label(frame_post10, text='Esto es un post')
-        self.post10_real.grid(row=1, column=3)
-
+        
         #MARK: BOTONES frame_r
         self.buscar = ttk.Entry(self.frame_buscar_frame_r, textvariable=self.entry_var, style='placeholder.TEntry')
         self.buscar.insert(0, self.place_holder_text)
@@ -669,32 +534,7 @@ class Cuerpo():
         frame_post1 = ttk.LabelFrame(self.frame_para_ti2)
         frame_post1.grid(row=2, column=0, pady=0, padx=0, sticky='ew')
 
-        frame_post2 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post2.grid(row=3, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post3 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post3.grid(row=4, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post4 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post4.grid(row=5, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post5 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post5.grid(row=6, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post6 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post6.grid(row=7, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post7 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post7.grid(row=8, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post8 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post8.grid(row=9, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post9 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post9.grid(row=10, column=0, pady=0, padx=0, sticky='ew')
-
-        frame_post10 = ttk.LabelFrame(self.frame_para_ti2)
-        frame_post10.grid(row=11, column=0, pady=0, padx=0, sticky='ew')
+        
 
 
         
@@ -705,9 +545,9 @@ class Cuerpo():
         #publicar post
         foto_escribir_post = ttk.Label(frame_escribir_post, image=self.profile2_img)
         foto_escribir_post.grid(row=0, column=0, padx=10, pady=0)
-        escribir_post = ttk.Entry(frame_escribir_post)
-        escribir_post.grid(row=0, column=1, padx=0, pady=20, sticky='ew')
-        pad_escribir_post_invisible = tk.Label(escribir_post)
+        self.entry_escribir_post = ttk.Entry(frame_escribir_post)
+        self.entry_escribir_post.grid(row=0, column=1, padx=0, pady=20, sticky='ew')
+        pad_escribir_post_invisible = tk.Label(self.entry_escribir_post)
         pad_escribir_post_invisible.grid(padx=680, pady=0)
         pad_escribir_post_invisible.configure(state='disabled')
         self.boton_publicar_post = ttk.Button(frame_escribir_post, image=self.flechita_img, style='Custom.TButton', command=self.publicar_post)
@@ -742,127 +582,39 @@ class Cuerpo():
         post1_real = ttk.Label(frame_post1, text='Esto es un post')
         post1_real.grid(row=1, column=3)
 
-        post2_foto = ttk.Label(frame_post2, image=self.post1_img)
-        post2_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post2_nombre = ttk.Label(frame_post2, text='Usuario', style='Nombree.TLabel')
-        post2_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post2_usuario = ttk.Label(frame_post2, text='@usuario', style='Usuario.TLabel')
-        post2_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post2 = ttk.Label(frame_post2, text='-------')
-        post2.grid(row=1, column=1)
-        post2_2 = ttk.Label(frame_post2, text='------->')
-        post2_2.grid(row=1, column=2)
-        post2_real = ttk.Label(frame_post2, text='Esto es un post')
-        post2_real.grid(row=1, column=3)
+         
+    def publicar_post(self,): 
+           # Crear un nuevo frame para el post
+        try: #try to insert the post in the frame_para_ti
+            new_post_frame = ttk.Frame(self.frame_para_ti)
+            new_post_frame.grid(row=self.next_row_of_post, column=1, pady=0, sticky='ew')
+            print('INFO: post will spawn in the frame_para_ti')
+        except: #if the code above fails, insert the post in the frame_para_ti2
+            new_post_frame = ttk.Frame(self.frame_para_ti2)
+            new_post_frame.grid(row=self.next_row_of_post, column=1, pady=0, sticky='ew')
+            print('INFO: post will spawn in the frame_para_ti2')
 
-        post3_foto = ttk.Label(frame_post3, image=self.post1_img)
-        post3_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post3_nombre = ttk.Label(frame_post3, text='Usuario', style='Nombree.TLabel')
-        post3_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post3_usuario = ttk.Label(frame_post3, text='@usuario', style='Usuario.TLabel')
-        post3_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post3 = ttk.Label(frame_post3, text='-------')
-        post3.grid(row=1, column=1)
-        post3_2 = ttk.Label(frame_post3, text='------->')
-        post3_2.grid(row=1, column=2)
-        post3_real = ttk.Label(frame_post3, text='Esto es un post')
-        post3_real.grid(row=1, column=3)
-
-        post4_foto = ttk.Label(frame_post4, image=self.post1_img)
-        post4_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post4_nombre = ttk.Label(frame_post4, text='Usuario', style='Nombree.TLabel')
-        post4_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post4_usuario = ttk.Label(frame_post4, text='@usuario', style='Usuario.TLabel')
-        post4_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post4 = ttk.Label(frame_post4, text='-------')
-        post4.grid(row=1, column=1)
-        post4_2 = ttk.Label(frame_post4, text='------->')
-        post4_2.grid(row=1, column=2)
-        post4_real = ttk.Label(frame_post4, text='Esto es un post')
-        post4_real.grid(row=1, column=3)
-
-        post5_foto = ttk.Label(frame_post5, image=self.post1_img)
-        post5_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post5_nombre = ttk.Label(frame_post5, text='Usuario', style='Nombree.TLabel')
-        post5_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post5_usuario = ttk.Label(frame_post5, text='@usuario', style='Usuario.TLabel')
-        post5_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post5 = ttk.Label(frame_post5, text='-------')
-        post5.grid(row=1, column=1)
-        post5_2 = ttk.Label(frame_post5, text='------->')
-        post5_2.grid(row=1, column=2)
-        post5_real = ttk.Label(frame_post5, text='Esto es un post')
-        post5_real.grid(row=1, column=3)
-
-        post6_foto = ttk.Label(frame_post6, image=self.post1_img)
-        post6_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post6_nombre = ttk.Label(frame_post6, text='Usuario', style='Nombree.TLabel')
-        post6_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post6_usuario = ttk.Label(frame_post6, text='@usuario', style='Usuario.TLabel')
-        post6_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post6 = ttk.Label(frame_post6, text='-------')
-        post6.grid(row=1, column=1)
-        post6_2 = ttk.Label(frame_post6, text='------->')
-        post6_2.grid(row=1, column=2)
-        post6_real = ttk.Label(frame_post6, text='Esto es un post')
-        post6_real.grid(row=1, column=3)
-
-        post7_foto = ttk.Label(frame_post7, image=self.post1_img)
-        post7_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post7_nombre = ttk.Label(frame_post7, text='Usuario', style='Nombree.TLabel')
-        post7_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post7_usuario = ttk.Label(frame_post7, text='@usuario', style='Usuario.TLabel')
-        post7_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post7 = ttk.Label(frame_post7, text='-------')
-        post7.grid(row=1, column=1)
-        post7_2 = ttk.Label(frame_post7, text='------->')
-        post7_2.grid(row=1, column=2)
-        post7_real = ttk.Label(frame_post7, text='Esto es un post')
-        post7_real.grid(row=1, column=3)
-
-        post8_foto = ttk.Label(frame_post8, image=self.post1_img)
-        post8_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post8_nombre = ttk.Label(frame_post8, text='Usuario', style='Nombree.TLabel')
-        post8_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post8_usuario = ttk.Label(frame_post8, text='@usuario', style='Usuario.TLabel')
-        post8_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post8 = ttk.Label(frame_post8, text='-------')
-        post8.grid(row=1, column=1)
-        post8_2 = ttk.Label(frame_post8, text='------->')
-        post8_2.grid(row=1, column=2)
-        post8_real = ttk.Label(frame_post8, text='Esto es un post')
-        post8_real.grid(row=1, column=3)
-
-        post9_foto = ttk.Label(frame_post9, image=self.post1_img)
-        post9_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post9_nombre = ttk.Label(frame_post9, text='Usuario', style='Nombree.TLabel')
-        post9_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post9_usuario = ttk.Label(frame_post9, text='@usuario', style='Usuario.TLabel')
-        post9_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post9 = ttk.Label(frame_post9, text='-------')
-        post9.grid(row=1, column=1)
-        post9_2 = ttk.Label(frame_post9, text='------->')
-        post9_2.grid(row=1, column=2)
-        post9_real = ttk.Label(frame_post9, text='Esto es un post')
-        post9_real.grid(row=1, column=3)
-
-        post10_foto = ttk.Label(frame_post10, image=self.post1_img)
-        post10_foto.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
-        post10_nombre = ttk.Label(frame_post10, text='Usuario', style='Nombree.TLabel')
-        post10_nombre.grid(row=0, column=1, padx=0, pady=0)
-        post10_usuario = ttk.Label(frame_post10, text='@usuario', style='Usuario.TLabel')
-        post10_usuario.grid(row=0, column=2, padx=0, pady=0)
-        post10 = ttk.Label(frame_post10, text='-------')
-        post10.grid(row=1, column=1)
-        post10_2 = ttk.Label(frame_post10, text='------->')
-        post10_2.grid(row=1, column=2)
-        post10_real = ttk.Label(frame_post10, text='Esto es un post')
-        post10_real.grid(row=1, column=3)
-    def publicar_post(self):
-        #post_publicado = ttk.Label(self.frame_para_ti, text=self.entry_escribir_post.get(), image=self.profile2_img)
-        #post_publicado.grid(row=0, column=0, padx=0, pady=0, sticky='ew')
-         pass   
-
+        self.new_post_img = ttk.Label(new_post_frame, image=self.post1_img)
+        self.new_post_img.grid(row=0, rowspan=2, column=0, pady=3, padx=5)
+        self.new_post_name = ttk.Label(new_post_frame, text=self.nombre_usuario_publico, style='Nombree.TLabel')
+        self.new_post_name.grid(row=0, column=1, padx=0, pady=0)
+        self.new_post_user = ttk.Label(new_post_frame, text=self.nombre_usuario_publico +'@', style='Usuario.TLabel')
+        self.new_post_user.grid(row=0, column=2, padx=0, pady=0)
+        self.new_post_tecnical_uses_text = ttk.Label(new_post_frame, text='-------')
+        self.new_post_tecnical_uses_text.grid(row=1, column=1)
+        self.new_post_tecnical_uses_text2 = ttk.Label(new_post_frame, text='------->')
+        self.new_post_tecnical_uses_text2.grid(row=1, column=2)
+        try:
+            text_of_the_post = self.entry_escribir_post.get()
+        except:
+            pass
+        self.new_post = ttk.Label(new_post_frame, text=text_of_the_post) 
+        self.new_post.grid(row=1, column=3)
+        
+        # Incrementar el contador de posts publicados
+        self.next_row_of_post += 1
+        print('next post will spawn in row: ',self.next_row_of_post)
+         
 
         
     #MARK: HOME Y DERIBADOS
