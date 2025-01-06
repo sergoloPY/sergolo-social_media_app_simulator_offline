@@ -1,24 +1,22 @@
 print('LOG:')
 print(' ')
 print(' ')
-import os
-from pprint import saferepr
-import stat
-import threading
-
-import tkinter as tk
+import os #para detectar si estas en linux o en windows y para trabajar con el sistema operativo
+from pprint import saferepr # no me acuerdo para que servia
+import stat #para cosas de sistemas operativos creo
+S
+import tkinter as tk # GUI
 from tkinter import ttk, messagebox #messagebox para widgets desplegables
-from tkinter.font import Font
-from PIL import Image, ImageTk
+from tkinter.font import Font #fuentes especiales
+from PIL import Image, ImageTk #para trabajar con imagenes
 
-import requests
-from io import BytesIO
-from tkinter import PhotoImage
+from io import BytesIO #para trabajar con imagenes, especificamente abrir archivos o algo asi
+from tkinter import PhotoImage #para trabajar con imagenes
 
-from timeit import *
-import time
+from timeit import * #timing de los bots a los que les puedes enviar mensajes (hitler, stalin, etc)
+import time #timing de los bots a los que les puedes enviar mensajes (hitler, stalin, etc)
 
-from math import *
+from math import * #para la caluladora del menu "mas opciones"
 
 class Cuerpo():
     def __init__(self, window):
@@ -33,7 +31,7 @@ class Cuerpo():
         #self.wind.minsize(1920, 1080)
         #self.wind.maxsize(1920, 1080)
 
-        # Función para obtener imagen desde URL (no se utiliza)
+        # Función para obtener imagen desde URL (no se utiliza) REQUIERE REQUESTS
         # def get_image_by_url(url):
         #     response = requests.get(url)
         #     image = Image.open(BytesIO(response.content))

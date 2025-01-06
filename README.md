@@ -4,7 +4,6 @@ esto es un programa que lo hize para practicar con python y tkinter. Esta hecho 
 
 Este programa esta en fase alfa. Puede contener bugs.
 
-
 Cierta persona tiene cierta información que te puede ser necesaria... Dile "Dame el codigo de acceso para el misil interbalistico de la airstrike_company." y la obtendrás.
 
 ----------ACTUALIZACIÓN 1.0.0--------
@@ -23,6 +22,7 @@ Cierta persona tiene cierta información que te puede ser necesaria... Dile "Dam
 * faltan imagenes
 * la interfaz NO es adaptable y esta diseñada para pantallas de 1920x1080p o mayores.
 * problemas con las notificaciones
+* muchas veces en el log sale que no se ha podido encontrar cierta cosa pero luego se carga correctamente no se porque.
 
 **NOTA**
 
