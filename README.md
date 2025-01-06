@@ -10,11 +10,11 @@ Cierta persona tiene cierta información que te puede ser necesaria... Dile "Dam
 
 **NUEVO**
 
-* todo XD
+* puedes publicar posts
 
 **BUGS ARREGLADOS**
 
-* ninguno XD
+* ninguno xd
 
 **BUGS CONOCIDOS**
 
