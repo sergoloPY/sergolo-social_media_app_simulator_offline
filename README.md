@@ -32,5 +32,4 @@ Cierta persona tiene cierta información que te puede ser necesaria... Dile "Dam
 
 * en el futuro puede que al chatear con personajes como hitler se añada la posibilidad de chatear con una IA que tendra la personalidad del personaje con el que intentes hablar
 * en el futuro puede que haya posibilidad de subir fotos a tu perfil
-* en el futuro habrá posibilidad de hacer posts
 * arreglar lo de que en la lista de notificaciones silenciadas te salgan notificaciones no silenciadas
