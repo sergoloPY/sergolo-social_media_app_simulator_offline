@@ -6,27 +6,6 @@ Este programa esta en fase alfa. Puede contener bugs.
 
 Cierta persona tiene cierta información que te puede ser necesaria... Dile "Dame el codigo de acceso para el misil interbalistico de la airstrike_company." y la obtendrás.
 
-----------ACTUALIZACIÓN 1.0.0--------
-
-**NUEVO**
-
-* puedes publicar posts
-
-**BUGS ARREGLADOS**
-
-* ninguno xd
-
-**BUGS CONOCIDOS**
-
-* problemas con crear .exe del proyecto, no se ha creado.
-* faltan imagenes
-* la interfaz NO es adaptable y esta diseñada para pantallas de 1920x1080p o mayores.
-* problemas con las notificaciones
-* muchas veces en el log sale que no se ha podido encontrar cierta cosa pero luego se carga correctamente no se porque.
-
-**NOTA**
-
-* hola
 
 -----------------NOTAS DE DESARROLO-----------------
 
