@@ -11,6 +11,7 @@ from tkinter.font import Font #fuentes especiales
 from PIL import Image, ImageTk #para trabajar con imagenes
 
 from io import BytesIO #para trabajar con imagenes, especificamente abrir archivos o algo asi
+import base64 #para encriptar imagenes i eso
 from tkinter import PhotoImage #para trabajar con imagenes
 
 from timeit import * #timing de los bots a los que les puedes enviar mensajes (hitler, stalin, etc)
